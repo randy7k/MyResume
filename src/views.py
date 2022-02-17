@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.views import generic
+from src.models import Source
 
 class IndexView(generic.TemplateView):
     template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['src'] = Source.objects.last()
         return context
 
     def get(self, request, *args, **kwargs):
