@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from src.models import Source
+from Home.models import Header
 
 class IndexView(generic.TemplateView):
     template_name = 'index.html'
@@ -8,6 +9,7 @@ class IndexView(generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['src'] = Source.objects.last()
+        context['header'] = Header.objects.last()
         return context
 
     def get(self, request, *args, **kwargs):

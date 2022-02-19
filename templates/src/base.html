@@ -60,7 +60,13 @@
   ======================================================== -->
 </head>
 
-<body>
+<body 
+{% if header.background %}
+  style="background: #040404 
+  url({{ header.background.url }}) 
+  top right no-repeat;"
+{% endif %}
+>
 
 {% block content %}
 {% endblock content %}

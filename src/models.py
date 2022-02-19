@@ -3,7 +3,6 @@ from django.db import models
 class Source(models.Model):
     # Feneral
     name = models.CharField(max_length=100)
-    logo = models.ImageField(upload_to='src/logos', blank=True, null=True)
     isotipo = models.ImageField(upload_to='src/isotipos', blank=True, null=True)
     color = models.CharField(max_length=100, blank=True, null=True)
     color_light = models.CharField(max_length=100, blank=True, null=True)
