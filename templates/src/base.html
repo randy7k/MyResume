@@ -34,23 +34,15 @@
   <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
 
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-  {% if src.color %}
-  <style>
-    :root {
-        --mr-color: {{ src.color }};
-    }
-  </style>
-  {% endif %}
-  {% if src.color_light %}
-  <style>
-    :root {
-        --mr-color-light: {{ src.color_light }};
-    }
-  </style>
-  {% endif %}
+
+  <!-- Dynamic Styles -->
+  {% include 'src/dynamic_styles.html' %}
 
   <!-- =======================================================
   * Template Name: Personal - v4.7.0
@@ -60,13 +52,7 @@
   ======================================================== -->
 </head>
 
-<body 
-{% if header.background %}
-  style="background: #040404 
-  url({{ header.background.url }}) 
-  top right no-repeat;"
-{% endif %}
->
+<body>
 
 {% block content %}
 {% endblock content %}

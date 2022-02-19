@@ -1,0 +1,24 @@
+{% load static %}
+<style>
+    {% if src.color %}
+    :root {
+        --mr-color: {{ src.color }};
+    }
+    {% endif %}
+    {% if src.color_light %}
+    :root {
+        --mr-color-light: {{ src.color_light }};
+    }
+    {% endif %}
+    {% if header.background %}
+    body::before {
+        background: #040404 url({{ header.background.url }}) top right no-repeat;
+        background-size: cover;
+        content: "";
+    }
+    {% else %}
+    body::before {
+        content: "";
+    }
+    {% endif %}
+</style>

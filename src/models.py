@@ -1,5 +1,4 @@
 from django.db import models
-
 class Source(models.Model):
     # Feneral
     name = models.CharField(max_length=100)
@@ -55,3 +54,11 @@ class Source(models.Model):
     def __str__(self):
         return self.name
 
+class SocialNetwork(models.Model):
+    name = models.CharField(max_length=100)
+    icon = models.CharField(max_length=100)
+    url = models.URLField()
+    source = models.ForeignKey(Source, on_delete=models.CASCADE, default=Source.objects.last().id, related_name='social_networks')
+
+    def __str__(self):
+        return self.name
