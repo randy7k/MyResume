@@ -464,7 +464,7 @@ section .container {
   background: rgba(255, 255, 255, 0.08);
   transition: ease-in-out 0.3s;
 }
-.interests .icon-box i {
+.interests .icon-box i, .interests .icon-box svg{
   font-size: 32px;
   padding-right: 10px;
   line-height: 1;

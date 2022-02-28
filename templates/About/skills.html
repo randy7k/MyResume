@@ -1,0 +1,26 @@
+{% load static %}
+
+
+    <!-- ======= Skills  ======= -->
+    <div class="skills container">
+
+      <div class="section-title">
+        <h2>{{ about_me.skills_title }}</h2>
+      </div>
+
+      <div class="row skills-content">
+        
+        {% for skill in skills %}
+        <div class="col-lg-6">
+            <div class="progress">
+                <span class="skill">{{ skill.name }} <i class="val">{{ skill.percentage }}%</i></span>
+                <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+      </div>
+
+    </div><!-- End Skills -->

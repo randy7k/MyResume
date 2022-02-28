@@ -1,0 +1,27 @@
+{% load static %}
+
+    <!-- ======= About Me ======= -->
+    <div class="about-me container">
+
+      <div class="section-title">
+        <h2>{{ src.about_name }}</h2>
+        <p>{{ src.about_title }}</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="{{ about_me.image.url }}" class="img-fluid" alt="about_me.image">
+        </div>
+        <div class="col-lg-8 align-self-center content" data-aos="fade-left">
+
+            <div class="row justify-content-center">
+                <div class="col-7"> 
+                    <h3>{{ about_me.title }}</h3>
+                    {{ about_me.description.html|safe }}
+                </div>
+            </div>
+            
+        </div>
+      </div>
+
+    </div><!-- End About Me -->
