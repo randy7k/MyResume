@@ -1,4 +1,3 @@
-from webbrowser import BackgroundBrowser
 from django.db import models
 
 class Header(models.Model):
