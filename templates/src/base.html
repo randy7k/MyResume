@@ -9,7 +9,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>
-  {% if src.name %}
+  {% if src and src.name %}
     {{ src.name}}
   {% else %}
     MyResume
@@ -19,7 +19,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  {% if src.isotipo %}
+  {% if src and src.isotipo %}
   <link href="{{ src.isotipo.url }}" rel="icon">
   <link href="{{ src.isotipo.url }}" rel="apple-touch-icon">
   {% endif %}

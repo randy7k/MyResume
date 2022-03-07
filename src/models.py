@@ -1,4 +1,6 @@
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
+
 class Source(models.Model):
     # Feneral
     name = models.CharField(max_length=100)
@@ -22,6 +24,8 @@ class Source(models.Model):
     # Services
     services_name = models.CharField(max_length=100, default="Services")
     services_title = models.CharField(max_length=100, default="My services")
+    services_col_md = models.IntegerField(default=6, validators=[MaxValueValidator(12), MinValueValidator(1)])
+    services_col_lg = models.IntegerField(default=4, validators=[MaxValueValidator(12), MinValueValidator(1)])
     show_services = models.BooleanField(default=True)
 
     # Portfoio
@@ -58,7 +62,11 @@ class SocialNetwork(models.Model):
     name = models.CharField(max_length=100)
     icon = models.CharField(max_length=100)
     url = models.URLField()
-    source = models.ForeignKey(Source, on_delete=models.CASCADE, default=Source.objects.last().id, related_name='social_networks')
+    sourceObj = Source.objects.last()
+    if sourceObj:
+        source = models.ForeignKey(Source, on_delete=models.CASCADE, default=sourceObj.id, related_name='social_networks')
+    else:
+        source = models.ForeignKey(Source, on_delete=models.CASCADE, default=None, related_name='social_networks', blank=True, null=True)
 
     def __str__(self):
         return self.name

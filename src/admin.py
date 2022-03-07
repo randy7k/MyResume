@@ -7,7 +7,7 @@ class SourceAdmin(admin.ModelAdmin):
         ('Home',        {'fields':['home_name']}),
         ('About',       {'fields':['about_name','about_title','show_about']}),
         ('Resume',      {'fields':['resume_name','resume_title','show_resume']}),
-        ('Services',    {'fields':['services_name','services_title','show_services']}),
+        ('Services',    {'fields':['services_name','services_title','show_services','services_col_md','services_col_lg']}),
         ('Portfoio',    {'fields':['portfoio_name','portfoio_title','show_portfoio']}),
         ('Contact',     {'fields':['contact_name','contact_title','contact_address_lable','contact_social_lable','contact_email_lable','contact_phone_lable','contact_form_name_placeholder','contact_form_email_placeholder','contact_form_subject_placeholder','contact_form_message_placeholder','contact_btn_text','show_contact']}),
         ('Personal',    {'fields':['address','email','phone']})

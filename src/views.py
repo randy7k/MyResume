@@ -4,6 +4,7 @@ from src.models import Source
 from Home.models import Header
 from About.models import AboutMe, Count, Skill, Interest, Testimonial
 from Resume.models import Section
+from Service.models import Service
 
 class IndexView(generic.TemplateView):
     template_name = 'index.html'
@@ -17,7 +18,8 @@ class IndexView(generic.TemplateView):
         context['skills'] = Skill.objects.all()
         context['interests'] = Interest.objects.all()
         context['testimonials'] = Testimonial.objects.all()
-        context['sections'] = Section.objects.all()
+        context['resume'] = Section.objects.all()
+        context['services'] = Service.objects.all()
         return context
 
     def get(self, request, *args, **kwargs):
