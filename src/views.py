@@ -5,6 +5,7 @@ from Home.models import Header
 from About.models import AboutMe, Count, Skill, Interest, Testimonial
 from Resume.models import Section
 from Service.models import Service
+from Portfolio.models import Category, Portfolio
 
 class IndexView(generic.TemplateView):
     template_name = 'index.html'
@@ -20,6 +21,7 @@ class IndexView(generic.TemplateView):
         context['testimonials'] = Testimonial.objects.all()
         context['resume'] = Section.objects.all()
         context['services'] = Service.objects.all()
+        context['portfolio_categories'] = Category.objects.distinct().filter(portfolio__show=True)
         return context
 
     def get(self, request, *args, **kwargs):
