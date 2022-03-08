@@ -46,10 +46,6 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
-}
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -70,8 +66,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
 }
 #header h1 a, #header h1 a:hover {
   color: #fff;
@@ -197,9 +191,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   padding: 0;
-  font-family: "Poppins", sans-serif;
   font-size: 16px;
-  font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
   transition: 0.3s;
@@ -327,14 +319,12 @@ section .container {
 
 .section-title h2 {
   font-size: 14px;
-  font-weight: 500;
   padding: 0;
   line-height: 1px;
   margin: 0 0 20px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #aaaaaa;
-  font-family: "Poppins", sans-serif;
 }
 .section-title h2::after {
   content: "";
@@ -348,9 +338,7 @@ section .container {
   margin: 0;
   margin: -15px 0 15px 0;
   font-size: 36px;
-  font-weight: 700;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
   color: #fff;
 }
 
@@ -358,7 +346,6 @@ section .container {
 # About
 --------------------------------------------------------------*/
 .about-me .content h3 {
-  font-weight: 700;
   font-size: 26px;
   color: var(--mr-color);
 }
@@ -397,7 +384,7 @@ section .container {
   text-align: center;
   background: rgba(255, 255, 255, 0.08);
 }
-.counts .count-box i {
+.counts .count-box i, .counts .count-box svg {
   position: absolute;
   top: -25px;
   left: 50%;
@@ -412,13 +399,11 @@ section .container {
 .counts .count-box span {
   font-size: 36px;
   display: block;
-  font-weight: 600;
   color: #fff;
 }
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
   font-size: 14px;
 }
 
@@ -436,8 +421,6 @@ section .container {
   margin: 0;
   text-transform: uppercase;
   display: block;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
   color: #fff;
 }
 .skills .progress .skill .val {
@@ -449,7 +432,7 @@ section .container {
 }
 .skills .progress-bar {
   width: 1px;
-  height: 10px;
+  height: 5px;
   transition: 0.9s;
   background-color: var(--mr-color);
 }
@@ -470,7 +453,6 @@ section .container {
   line-height: 1;
 }
 .interests .icon-box h3 {
-  font-weight: 700;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -501,7 +483,6 @@ section .container {
 }
 .testimonials .testimonial-item h3 {
   font-size: 18px;
-  font-weight: bold;
   margin: 10px 0 5px 45px;
   color: #fff;
 }
@@ -554,7 +535,6 @@ section .container {
 --------------------------------------------------------------*/
 .resume .resume-title {
   font-size: 26px;
-  font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
   color: #fff;
@@ -568,9 +548,7 @@ section .container {
 .resume .resume-item h4 {
   line-height: 18px;
   font-size: 18px;
-  font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
   color: var(--mr-color);
   margin-bottom: 10px;
 }
@@ -579,7 +557,6 @@ section .container {
   background: rgba(255, 255, 255, 0.15);
   padding: 5px 15px;
   display: inline-block;
-  font-weight: 600;
   margin-bottom: 10px;
 }
 .resume .resume-item ul {
@@ -642,7 +619,6 @@ section .container {
   transform: translateZ(-1px);
 }
 .services .icon-box h4 {
-  font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
 }
@@ -690,7 +666,6 @@ section .container {
   display: inline-block;
   padding: 8px 16px 10px 16px;
   font-size: 14px;
-  font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
   color: #fff;
@@ -768,7 +743,6 @@ section .container {
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
   color: #fff;
-  font-weight: 600;
 }
 .portfolio .portfolio-wrap .portfolio-info p {
   color: #ffffff;
@@ -829,7 +803,6 @@ section .container {
 }
 .portfolio-details .portfolio-title {
   font-size: 26px;
-  font-weight: 700;
   margin-bottom: 20px;
 }
 .portfolio-details .portfolio-info {
@@ -837,7 +810,6 @@ section .container {
 }
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
-  font-weight: 400;
   margin-bottom: 20px;
 }
 .portfolio-details .portfolio-info ul {
@@ -891,7 +863,6 @@ section .container {
 .contact .info-box h3 {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
-  font-weight: 700;
   margin: 10px 0 8px 68px;
 }
 .contact .info-box p {
@@ -926,7 +897,6 @@ section .container {
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
-  font-weight: 600;
 }
 .contact .php-email-form .error-message br + br {
   margin-top: 25px;
@@ -937,7 +907,6 @@ section .container {
   background: var(--mr-color);
   text-align: center;
   padding: 15px;
-  font-weight: 600;
 }
 .contact .php-email-form .loading {
   display: none;
@@ -1038,4 +1007,14 @@ section .container {
 }
 .credits a:hover {
   color: #fff;
+}
+
+/* Alerts */
+
+body .alert{
+  position: fixed;
+  display: grid;
+  top: 10%;
+  right: 10%;
+  z-index: 1000;
 }

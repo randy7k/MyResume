@@ -39,7 +39,7 @@ class Skill(models.Model):
 
 class Interest(models.Model):
     icon = models.CharField(max_length=200)
-    color = models.CharField(max_length=200)
+    color = models.CharField(max_length=200, blank=True, null=True)
     name = models.CharField(max_length=200)
 
     def __str__(self):

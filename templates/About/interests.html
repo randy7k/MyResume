@@ -10,9 +10,9 @@
 
       <div class="row justify-content-center">
         {% for interest in interests %}        
-        <div class="col-lg-3 col-md-4">
+        <div class="col-lg-3 col-md-4 mb-3">
           <div class="icon-box">
-            <span style="color: {{ interest.color }};">
+            <span {% if interest.color %}style="color: {{ interest.color }};"{% endif %}>
             {{ interest.icon|safe }}
             </span>
             <h3>{{ interest.name }}</h3>

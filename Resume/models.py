@@ -15,6 +15,9 @@ class Item(models.Model):
     end = models.DateField(auto_now=False, blank=True, null=True)
     description = QuillField()
     show = models.BooleanField(default=True)
+    
+    class Meta():
+        ordering = ['-start']
 
     def __str__(self):
         return self.name + ' - ' + self.section.name
