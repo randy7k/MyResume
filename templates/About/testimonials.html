@@ -1,0 +1,41 @@
+{% load static %}
+
+
+    <!-- ======= Testimonials ======= -->
+    <div class="testimonials container">
+
+      <div class="section-title">
+        <h2>{{ about_me.testimonials_title }}</h2>
+      </div>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+            {% for testimonial in testimonials %}
+            <div class="swiper-slide">
+                <div class="testimonial-item">
+                <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    {{ testimonial.description }}
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                {% if testimonial.image %}
+                <img src="{{ testimonial.image.url }}" class="testimonial-img" alt="{{ testimonial.image }}">
+                {% endif %}
+                <h3>{{ testimonial.name }}</h3>
+                {% if testimonial.position %}
+                <h4>{{ testimonial.position }}</h4>
+                {% endif %}
+                </div>
+            </div><!-- End testimonial item -->
+            {% endfor %}
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="owl-carousel testimonials-carousel">
+
+      </div>
+
+    </div><!-- End Testimonials  -->

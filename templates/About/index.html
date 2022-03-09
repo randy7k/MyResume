@@ -1,0 +1,26 @@
+{% load static %}
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+
+    {% if about_me %}
+        {% include "About/about_me.html" %}
+    {% endif %}
+
+    {% if counts and about_me.show_counts %}
+        {% include "About/counts.html" %}
+    {% endif %}
+
+    {% if skills and about_me.show_skills %}
+        {% include "About/skills.html" %}
+    {% endif %}
+    
+    {% if interests and about_me.show_interests %}
+        {% include "About/interests.html" %}
+    {% endif %}
+    
+    {% if testimonials and about_me.show_testimonials %}
+      {% include "About/testimonials.html" %}
+    {% endif %}
+
+  </section><!-- End About Section -->

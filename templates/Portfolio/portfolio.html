@@ -1,0 +1,47 @@
+{% load static %}
+
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>{{ src.portfoio_name }}</h2>
+        <p>{{ src.portfoio_title }}</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            {% for category in portfolio_categories %}
+            <li data-filter=".filter-{{ category.id}}">{{ category.name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container">
+        
+        {% for category in portfolio_categories  %}
+        {% for portfolio in category.portfolio.all %}
+        <div class="col-lg-4 col-md-6 portfolio-item filter-{{ portfolio.category.id }}">
+          <div class="portfolio-wrap">
+            <img src="{{ portfolio.image.url }}" class="img-fluid" alt="{{ portfolio.image }}">
+            <div class="portfolio-info">
+              <h4>{{ portfolio.title }}</h4>
+              <p>{{ portfolio.category.name }}</p>
+              <div class="portfolio-links">
+                <a href="{{ portfolio.image.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="{{ portfolio.name }}"><i class="bx bx-plus"></i></a>
+                <a href="{{ portfolio.url }}" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        {% endfor %}
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->

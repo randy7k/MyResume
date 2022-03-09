@@ -1,0 +1,24 @@
+{% load static %}
+
+
+    <!-- ======= Interests ======= -->
+    <div class="interests container">
+
+      <div class="section-title">
+        <h2>{{ about_me.interests_title }}</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        {% for interest in interests %}        
+        <div class="col-lg-3 col-md-4 mb-3">
+          <div class="icon-box">
+            <span {% if interest.color %}style="color: {{ interest.color }};"{% endif %}>
+            {{ interest.icon|safe }}
+            </span>
+            <h3>{{ interest.name }}</h3>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div><!-- End Interests -->

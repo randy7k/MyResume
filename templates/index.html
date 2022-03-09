@@ -1,0 +1,30 @@
+{% extends "src/base.html" %}
+{% load static %}
+
+{% if src %}
+{% block content %}
+
+  {% include "Home/header.html" %}
+
+  {% if src.show_about and about_me %}
+    {% include "About/index.html" %}
+  {% endif %}  
+
+  {% if src.show_resume and resume %}
+    {% include "REsume/resume.html" %}
+  {% endif %}
+
+  {% if src.show_services and services%}
+    {% include "Service/services.html" %}
+  {% endif %}
+
+  {% if src.show_portfoio and portfolio_categories %}
+    {% include "Portfolio/portfolio.html" %}
+  {% endif %}
+
+  {% if src.show_contact %}
+    {% include "Contact/contact.html" %}
+  {% endif %}
+
+{% endblock content %}
+{% endif %}

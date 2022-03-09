@@ -1,0 +1,47 @@
+{% load static %}
+
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+      {% if header.logo %}
+      <a href="{% url 'src:index' %}" class="mr-auto"><img src="{{ header.logo.url }}" alt="{{ header.logo.name }}" class="img-fluid"></a>
+      {% else %}
+      <h1><a href="{% url 'src:index' %}">{{ header.name }}</a></h1>
+      {% endif %}
+      {% if header.description %}
+      <h2>{{ header.description|safe }}</h2>
+      {% endif %}
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link active" href="#header">{{ src.home_name }}</a></li>
+          {% if src.show_about and about_me %}
+          <li><a class="nav-link" href="#about">{{ src.about_name }}</a></li>
+          {% endif %}
+          {% if src.show_resume and resume %}
+          <li><a class="nav-link" href="#resume">{{ src.resume_name }}</a></li>
+          {% endif %}
+          {% if src.show_services and services %}
+          <li><a class="nav-link" href="#services">{{ src.services_name }}</a></li>
+          {% endif %}
+          {% if src.show_portfoio and portfolio_categories %}
+          <li><a class="nav-link" href="#portfolio">{{ src.portfoio_name }}</a></li>
+          {% endif %}
+          {% if src.show_contact %}
+          <li><a class="nav-link" href="#contact">{{ src.contact_name }}</a></li>
+          {% endif %}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      {% if src.social_networks %}
+      <div class="social-links">
+        {% for social in src.social_networks.all %}
+        <a href="{{ social.url }}" target="_blank">{{ social.icon|safe }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+    </div>
+  </header><!-- End Header -->
