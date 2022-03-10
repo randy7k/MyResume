@@ -1018,3 +1018,21 @@ body .alert{
   right: 10%;
   z-index: 1000;
 }
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #383838;
+}
+
+::-webkit-scrollbar-track {
+  background: #151515;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
